@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- External CSS file -->
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+        <!-- External icon libraries -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+        <title>Portfolio</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+ 
+    <body>
+
+        <div id="app">
+            <div class="header">
+                <div class="Contact">
+                    <i class="ri-smartphone-line"></i>
+                    <p>971 55-293-4769</p>
+    
+                </div>
+            
+         
+                <nav>
+                
+               
+                    <a href="#" v-on:click ="divSection('About')">ABOUT</a>
+                    <a href="#Projects" v-on:click ="divSection('About')" >PROJECTS</a>
+                    <a href="#" v-on:click ="divSection('Contact')">CONTACT</a>
+                    <a href="#">RESUME</a>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/lebohang-khasipe-a918242ab/"><i class="ri-linkedin-box-fill"></i></a>
+                        <a href="https://github.com/LebohangDev"><i class="ri-github-fill"></i></a>
+        
+                    </div>
+                   
+        
+                    
+                </nav>
+    
+    
+    
+    
+            </div>
+            
+ 
+   
+   
+            <div class="Content">
+
+               
+      
+                <!--utizling v-if to change to about div section if currentSection is eqaul to 'About'-->
+                <div class="AboutGrid" id="About" v-if="currentSection === 'About'">
+                    
+
+                  
+                    
+                   
+    
+                    <div class="title" >
+                        <div class="name">
+                            <p>Hi, my name is</p>
+                            <h1>Lebohang <span>Khasipe.</span></h1>
+                        </div>
+                        <h2>Aspiring Full Stack <span>Developer.</span></h2>
+                       
+                    </div>
+                    <div class="info">
+                        <h1>ABOUT</h1>
+                        <p>With a passion for <span>creating</span> innovative and <span>user-friendly applications</span>, I’ve refined 
+                          my skills in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. 
+                          Currently focused on developing modern websites <span>for clients</span> ranging 
+                          from landing pages, E-Commerce, and more.
+                        </p>
+                    </div>
+                    <div class="button">
+                        <button class="Project-Button">Check Out My Resume!</button>
+                    </div>
+                    <div class="Icons">
+                        <i class="ri-reactjs-line"></i>
+                        <i class="ri-nodejs-fill"></i>
+                        <i class="ri-html5-fill"></i>
+                        <i class="ri-css3-fill"></i>
+                        <i class="ri-database-2-fill"></i>
+                    </div>
+                    <div class="ProjectGrid">
+            
+                      
+                        <div class="project1" id="Projects">
+                            <div class="item">
+                                <img src="./Images/Projects/Beats-home.png" alt="">
+                                <div class="project-title">
+                                    <h1>BEATS</h1>
+                                    <P>E-COMMERCE BEATS STORE</P>
+                                </div>
+                               
+                            </div>
+                               
+                                
+                        </div>
+                        <div class="project2">
+                            <div class="item">
+                                <img src="./Images/Projects/DayDream-clothing.png" alt="">
+                                <div class="project-title">
+                                    <h1>DAYDREAM CLOTHING</h1>
+                                    <P>E-COMMERCE CLOTHING STORE</P>
+                                </div>
+                               
+                            </div>
+                              
+                                
+                        </div>
+                        <div class="project3">
+                            <div class="item">
+                                <img src="./Images/Projects/DayDream-Social.png" alt="">
+                                <div class="project-title">
+                                    <h1>DAYDREAM SOCIAL</h1>
+                                    <P>SOCIAL NETWORKING WEBSITE</P>
+                                </div>
+                              
+                            </div>
+                               
+                                
+                        </div>
+                        <div class="project4">
+                            <div class="item">
+                                <img src="./Images/Projects/Tankers.png" alt="">
+                                <div class="project-title">
+                                    <h1>TANKERS</h1>
+                                    <P>WEBSITE TANK SHOOTER GAME</P>
+                                </div>
+                              
+                            </div>
+                               
+                                
+                        </div>
+                        <div class="project5">
+                            <div class="item">
+                                <img src="./Images/Projects/Waye-Garden.png" alt="">
+                                <div class="project-title">
+                                    <h1>WAYE GARDENS</h1>
+                                    <P>COMPANY PROMOTIONAL WEBSITE</P>
+                                </div>
+                              
+                            </div>
+                               
+                                
+                        </div>
+                        <div class="project6">
+                            <div class="item">
+                                <img src="./Images/Projects/COFFEE-CREATIONS.png" alt="">
+                               
+                                <div class="project-title">
+                                    <h1>COFFEE CREATIONS</h1>
+                                    <P>PRODUCT & BRAND</P>
+                                </div>
+                              
+                            </div>
+                               
+                                
+                        </div>
+                            
+                    </div>
+                   
+                </div>
+              
+        
+
+                
+  
+                <div class="ContactGrid" id="Contact" v-if=" currentSection === 'Contact'">
+                  
+                    <div class="title">
+                        <h1>GET IN TOUCH</h1>
+                        <p>Let's <span>connect</span> and start a project <span>together!</span></p>
+                   </div>
+  
+                    <div class="contact-info">
+                        <div class="contact-item" id="contact-item1">
+                            <div class="icon-container">
+                                <i class="ri-mail-line"></i>
+
+                            </div>
+                          
+                            <p>lkhasipe@gmail.com</p>
+                        </div>
+                        <div class="contact-item"  id="contact-item2">
+                            <div class="icon-container">
+                                <i class="ri-phone-fill"></i>
+
+                            </div>
+                            
+                            <p>+971 55 293 4769</p>
+                        </div>
+                        <div class="contact-item"  id="contact-item3">
+                            <div class="icon-container">
+                                <i class="ri-map-pin-user-line"></i>
+
+                            </div>
+                            
+                            <p>United Arab Emirates, Dubai, Academic City, 00000</p>
+                            <p>USA, New York, Edgerton Blvd, 11432</p>
+                        </div>
+                    </div>
+  
+                    <div class="ContactForm">
+                        <form>
+                          
+                            <div class="Social-Icons">
+                                <i class="ri-youtube-fill"></i>
+                                <i class="ri-twitter-x-line"></i>
+                                <i class="ri-linkedin-box-fill"></i>
+                            </div>
+                        
+                            <div class="txt-field">
+                                <input type="text" v-model="contact.Firstname" id="Firstname" placeholder="First Name..." required>
+                                
+                            </div>
+                            <div class="txt-field">
+                                <input type="text" v-model="contact.Lastname" id="LastName" placeholder="Last Name..." required>
+                                
+                            </div>
+                            <div class="txt-field">
+                                <input type="email" v-model="contact.email" id="Email" placeholder="Unknown@gmail.com" required>
+                            
+                            </div>
+                            <div class="txt-field2">
+                                <input type="text" v-model="contact.message" id="Message-Box" placeholder="Write A Message..." required>
+                                
+                            </div>
+                            <button v-on:click="SendForm" id="Contact-Button">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+
+
+ 
+
+        <script>
+            let app = new Vue({
+                el: '#app',
+                data:{
+                    currentSection: 'About',
+                    contact:{
+                        Firstname: '',
+                        Lastname: '',
+                        email: '',
+                        message: ''
+                    },
+                   
+                },
+        
+                methods:{
+                    
+                    SendForm: function(){
+                      
+                        var ContactData = JSON.stringify(this.contact);
+
+            
+                    },
+                    divSection: function(section){
+                        this.currentSection = section
+                    }
+                
+                }
+            
+            })
+            
+            
+        </script>
+      
+   
+
+    
+    </body>
+
+  
+</html>

@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+body{
+    margin: 0;
+  
+
+   
+
+
+}
+
+
+#app{
+    font-family: Poppins;
+    
+    background: linear-gradient(0deg, rgb(4, 2, 31) 0%, rgb(1, 12, 29) 100%);
+    
+    font-size: 12px;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    
+    margin: 0;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto auto;
+    grid-template-areas:
+    "header    header   header"
+    "cont     cont     cont  ";
+    
+
+}
+
+
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+
+@keyframes FadeInLeft {
+    0%{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes FadeInDown {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes FadeDown {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes underline {
+    0%{
+       
+        text-decoration:none;
+    }
+    100%{
+        
+        text-decoration: underline;
+    }
+    
+}
+
+.header{
+    grid-area: header;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 3%;
+    padding: 20px;
+    
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(
+        rgba(27, 0, 99, 0.3),
+        rgba(44, 1, 70, 0.2)
+    );
+    
+  
+   
+   
+    
+
+}
+
+
+
+
+.Content{
+    grid-area: cont;
+}
+
+
+/*navigation bar section*/
+.header nav{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+   
+ 
+    gap: 12px;
+    z-index: 1;
+    
+    left: 2%;
+ 
+    
+    
+}
+
+.header nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    text-wrap: nowrap;
+    font-weight: 400;
+   
+    
+    padding: 5px;
+    text-align: center;
+    transition: 0.3s ease-out;
+  
+}
+
+.header .Contact{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    position: fixed;
+    left: 80%;
+    top: 20%;
+}
+
+.header .Contact i{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 6px;
+}
+.header .Contact p{
+    color: white;
+    white-space: nowrap;
+    position: relative;
+    bottom: 4px;
+    
+}
+
+
+
+.header nav .social{
+    position: relative;
+    
+    left: 0%;
+    bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    
+
+}
+
+
+.header nav i{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+    font-weight: 400;
+   
+   
+   
+    text-align: center;
+    transition: 0.3s ease-out;
+  
+}
+
+
+
+.header nav a:hover{
+    color: rgb(172, 172, 172);
+    cursor: pointer;
+    
+
+
+}
+
+
+.header nav a:active{
+    color: rgb(124, 124, 124);
+    
+
+
+}
+
+
+.header nav i:hover{
+    color: rgb(172, 172, 172);
+    cursor: pointer;
+    
+
+
+}
+
+
+.header nav i:active{
+    color: rgb(124, 124, 124);
+    
+
+
+}
+
+
+
+
+
+.AboutGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 100px 50px;
+    grid-template-areas:
+    "title    title    about"
+    "button   .        Icons  "
+    "project  project  project";
+    margin-left: 4%;
+    margin-right: 4%;
+    gap: 10px;
+    animation: FadeIn 0.3s ease-out;
+   
+
+}
+
+
+/*About us section*/
+.AboutGrid .title {
+   
+    grid-area: title;
+    position: relative;
+    width: 50%;
+    color: white;
+    white-space: nowrap;
+   
+   
+   
+}
+
+.AboutGrid .tite h1 span{
+    font-weight: 900;
+}
+
+.AboutGrid .title .name{
+    line-height: 1px;
+   
+
+}
+
+
+.AboutGrid .title .name p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(43, 159, 226);
+    opacity: 0;
+    animation: FadeIn 0.5s forwards;
+    
+   
+    
+
+}
+
+.AboutGrid .title .name h1{
+    font-size: 5rem;
+    font-weight: 600;
+    opacity: 0;
+
+    animation: FadeInLeft 0.5s forwards;
+    animation-delay: 0.3s;
+    
+}
+
+.AboutGrid .title h2{
+    
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: FadeDown 0.5s forwards;
+    animation-delay: 0.6s;
+    font-weight: 200;
+
+    
+}
+
+
+.AboutGrid .title h2 span{
+
+    color: rgb(43, 159, 226);
+    
+
+   
+    
+}
+
+.AboutGrid .info{
+    grid-area: about;
+    width: 40em;
+    white-space: wrap;
+    opacity: 0;
+    animation: FadeDown 0.5s forwards;
+    animation-delay: 0.8s;
+    text-align: left;
+    position: relative;
+    top: 20%;
+  
+  
+}
+
+
+.AboutGrid .info h1{
+    color: rgba(194, 193, 193);
+    line-height: 2px;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+
+}
+
+.AboutGrid  .info p{
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(194, 193, 193, 0.8);
+}
+
+
+.AboutGrid  .info p span{
+
+    color: rgb(22, 99, 143);
+
+
+}
+
+.AboutGrid .button .Project-Button{
+    background: none;
+    margin-top: 8px;
+    color: rgb(43, 159, 226);
+    font-size: 1rem;
+    border: 2px solid rgb(43, 159, 226);
+    padding: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1.6s;
+
+
+}
+
+.AboutGrid .Icons{
+    grid-area: Icons;
+    display: flex;
+    
+    flex-direction: row;
+    font-size: 3rem;
+    gap: 14px;
+}
+
+.AboutGrid .Icons i{
+    transition: 0.2s ease-out;
+    position: relative;
+    color: white;
+    top: 0px;
+}
+.AboutGrid .Icons i:hover{
+    top: -4px;
+}
+
+.AboutGrid .Icons .ri-reactjs-line{
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1s;
+}
+
+
+.AboutGrid .Icons .ri-nodejs-fill{
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1.2s;
+}
+
+.AboutGrid .Icons .ri-html5-fill{
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1.3s;
+}
+
+
+.AboutGrid .Icons .ri-css3-fill{
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1.4s;
+}
+
+
+.AboutGrid .Icons .ri-database-2-fill{
+    opacity: 0;
+    animation: FadeDown 0.3s forwards;
+    animation-delay: 1.5s;
+}
+
+
+
+
+.AboutGrid .Profile{
+    grid-area: profile;
+}
+
+.AboutGrid .Profile img{
+    width: 400px;
+    height: 450px;
+    border: none;
+    border-radius: 500px;
+    margin-left: 10%;
+    position: relative;
+    bottom: 10%;
+    
+
+}
+
+
+
+
+/*Project section*/
+.ProjectGrid{
+    grid-area: project;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1px 600px 600px auto;
+    grid-template-areas:
+    ".        title    .       "
+    "project1 project1 project4"
+    "project3 project2 project2"
+    "project5 project5 project6";
+   
+   
+    gap: 20px;
+    
+
+    border-radius: 5px;
+  
+
+    
+    
+   
+    
+
+}
+
+.ProjectGrid .title{
+  
+    grid-area: title;
+    width: fit-content;
+    
+   
+    
+}
+
+
+
+.ProjectGrid .title h1{
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+
+.ProjectGrid .item{
+    position: relative;
+    
+    border-radius: 15px;
+    
+    
+   
+    
+}
+
+.ProjectGrid .item img{
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    filter: grayscale(0.7);
+    border-radius: 15px;
+    transition: 0.3s ease-out;
+  
+    
+
+}
+
+.ProjectGrid .item img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+
+}
+
+
+
+
+
+.ProjectGrid .item .project-title{
+    position: absolute;
+    left: 2%;
+    line-height: 8px;
+  
+    width: 100%;
+    pointer-events: none;
+
+  
+    
+  
+   
+
+}
+
+
+.ProjectGrid .item .project-title h1{
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: rgb(185, 185, 185);
+    font-weight: 700;
+
+}
+
+.ProjectGrid .item .project-title P{
+    color: rgb(185, 185, 185, 0.8);
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+
+
+.ProjectGrid .project1{
+    grid-area: project1;
+    
+    animation-delay: 0.8s;
+    border-radius: 5px;
+   
+}
+
+
+.ProjectGrid .project2{
+    grid-area: project2;
+    
+    border-radius: 5px;
+    
+}
+
+
+.ProjectGrid .project3{
+    grid-area: project3;
+
+    border-radius: 5px;
+ 
+    
+}
+
+.ProjectGrid .project4{
+    grid-area: project4;
+    
+    border-radius: 5px;
+   
+}
+
+
+.ProjectGrid .project5{
+    grid-area: project5;
+    
+    border-radius: 5px;
+   
+}
+
+.ProjectGrid .project6{
+    grid-area: project6;
+    
+    border-radius: 5px;
+   
+}
+
+
+/*Contact Section*/
+
+
+.ContactGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 300px auto;
+    grid-template-areas:
+    "title    title    title"
+    "info     info     form "
+    "info     info     form ";
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 10px;
+    animation: FadeIn 0.3s ease-out;
+}
+
+
+.ContactGrid .items{
+    position: fixed;
+    inset: 0 0 0 0;
+    top: 0;
+    left: 0;
+}
+
+.ContactGrid .items img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+    
+   
+  
+
+}
+
+.ContactGrid .title{
+    grid-area: title;
+    line-height: 2px;
+    
+}
+
+.ContactGrid .title h1{
+    color: white;
+    font-size: 5rem;
+    font-weight: 800;
+    opacity: 0;
+    animation: FadeInDown 0.3s forwards;
+    
+
+}
+
+.ContactGrid .title p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: FadeInLeft 0.3s forwards;
+    animation-delay: 0.2s;
+
+}
+
+
+.ContactGrid .title p span{
+    color:rgb(43, 159, 226);
+
+
+
+}
+
+
+.ContactGrid .contact-info{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    letter-spacing: 1px;
+    width: 100%;
+   
+    
+}
+
+
+
+.ContactGrid .contact-info .contact-item p{
+    position: relative;
+    left: 140px;
+    bottom: 49%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+
+#contact-item1{
+    animation: FadeInDown 0.3s forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+
+}
+
+#contact-item2{
+    animation: FadeInDown 0.3s forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+
+}
+
+#contact-item3{
+    animation: FadeInDown 0.3s forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+
+}
+
+
+
+
+.ContactGrid .contact-info .contact-item .icon-container i{
+    font-size: 2.4rem;
+
+    transform: rotate(315deg) translatex(2px);
+    
+    position: absolute;
+   
+
+  
+    
+}
+
+
+.ContactGrid .contact-info .contact-item .icon-container{
+    border: 10px solid rgb(43, 159, 226);
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    transform: rotate(45deg);
+    
+    box-shadow: 8px 8px 0px rgb(255, 255, 255);
+
+}
+
+.ContactGrid .ContactForm{
+    grid-area: form;
+    position: relative;
+    left: 20%;
+    bottom: 16%;
+    width: fit-content;
+    height: fit-content;
+  
+
+}
+
+
+
+.ContactGrid .ContactForm .Social-Icons{
+    position: relative;
+    left: 40%;
+    bottom: 4%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+
+
+}
+
+
+.ContactGrid .ContactForm .Social-Icons i{
+    color: white;
+    font-size: 1.4rem;
+    
+
+
+}
+
+
+.ContactGrid .ContactForm .Social-Icons i:hover{
+    color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+
+
+.ContactGrid .ContactForm .Social-Icons i:active{
+    color: rgb(124, 124, 124);
+   
+}
+
+.ContactGrid .ContactForm form{
+    width: 30em;
+    height: 35em;
+    padding: 40px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(
+        rgba(44, 3, 75, 0.3),
+        rgba(6, 29, 67, 0.3)
+    );
+    border: 2px solid rgb(43, 159, 226);
+    border-radius: 5px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: FadeInDown 0.3s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+   
+
+    
+}
+
+
+
+.ContactGrid .ContactForm .txt-field{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255)  ;
+    color: white;
+   
+}
+
+
+
+
+
+.ContactGrid .ContactForm .txt-field input{
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid rgb(43, 159, 226);
+    background-color: transparent;
+    transition: 0.5s ease-out;
+    color: white;
+
+
+}
+
+
+.ContactGrid .ContactForm .txt-field2 input{
+    width: 100%;
+    border: 2px solid rgb(62, 168, 230);
+    height: 120px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s ease-out;
+    text-align: justify ;
+
+
+}
+
+
+
+.ContactGrid .ContactForm .txt-field2 input:focus{
+
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+   
+
+}
+.ContactGrid .ContactForm .txt-field input:focus{
+    width: 100%;
+    outline: none;
+
+
+}
+
+
+
+
+.ContactGrid .ContactForm button{
+    width: 10em;
+    height: 3em;
+    position: relative;
+    left: 37%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    background-color: rgb(255, 0, 0);
+    white-space: nowrap;
+    
+}
+
+
+
+.ContactGrid .ContactForm button:hover{
+    cursor: pointer;
+    background-color: rgb(196, 0, 0);
+
+
+}
+
+
+.ContactGrid .ContactForm button:active{
+    background-color: rgb(148, 0, 0);
+
+}
+
+
+
+
+
